@@ -1,5 +1,5 @@
 let scriptCache = {};
-function script(url) {
+const script = function(url) {
   if (typeof url !== 'string') {
     throw new Error('script: expected url string');
   }
