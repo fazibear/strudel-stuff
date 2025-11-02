@@ -1,5 +1,6 @@
+
 let scriptCache = {};
-const script = function(url) {
+const script = async function(url) {
   if (typeof url !== 'string') {
     throw new Error('script: expected url string');
   }
@@ -8,8 +9,9 @@ const script = function(url) {
     url = 'https://raw.githubusercontent.com/' + path;
   }
   if (!scriptCache[url]) {
-    scriptCache[url] = fetch(url)
-      .then((res) => res.text());
+    const response = await fetch(url);
+    const text = await response.text();
+    scriptCache[url] = text;
   }
   eval(scriptCache[url]);
 }
