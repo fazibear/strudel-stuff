@@ -1,4 +1,5 @@
-const drumMapSSD = {
+register('ssd', (pat) => {
+  const drumMapSSD = {
     'bd': 'c2',
     'sd': 'd2',
     'hh': 'c#4',
@@ -12,9 +13,7 @@ const drumMapSSD = {
     'ride': 'b3',
   };
 
-register('ssd', (pat) => {
   return pat.fmap(note => {
-    let newNote = {note: drumMapSSD[note.note]|| note.note};
-      return newNote;
-    });
+    return {note: drumMapSSD[note.note] || note.note};
+  });
 });
