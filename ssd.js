@@ -1,5 +1,5 @@
-const ssd = function(note) {
-  return note(note).ssd()
+const ssd = function(n) {
+  return note(n).ssd()
 }
 
 register('ssd', (pat) => {
