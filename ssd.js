@@ -19,6 +19,6 @@ register('ssd', (pat) => {
   });
 });
 
-Pattern.prototype.ssd = function(n) {
+ssd = function(n) {
   return note(n).ssd()
 }
