@@ -1,4 +1,4 @@
-window.loadCache = {};
+window.loadCache = window.loadCache || {};
 window.load = async function(url) {
   if (typeof url !== 'string') {
     throw new Error('load: expected url string');
