@@ -1,6 +1,6 @@
 
 let scriptCache = {};
-const script = async function(url) {
+window.script = async function(url) {
   if (typeof url !== 'string') {
     throw new Error('script: expected url string');
   }
