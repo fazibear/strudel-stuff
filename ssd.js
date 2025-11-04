@@ -1,6 +1,6 @@
 
 register('ssd', (pat) => {
-  const drumMapSSD = {
+  const SSD = {
     'bd': 'c2',
     'sd': 'd2',
     'hh': 'c#4',
@@ -15,10 +15,10 @@ register('ssd', (pat) => {
   };
 
   return pat.fmap(note => {
-    return {note: drumMapSSD[note.note] || note.note};
+    return {note: SSD[note.note] || note.note};
   });
 });
 
-ssd = function(n) {
+window.ssd = function(n) {
   return note(n).ssd()
 }
