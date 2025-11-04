@@ -7,8 +7,7 @@ window.load = async function(url) {
   if (url.startsWith('github:')) {
     const [_, path] = url.split('github:');
     url = 'https://raw.githubusercontent.com/' + path;
-  } else if {
-  if (url.startsWith('fazibear:')) {
+  } else if (url.startsWith('fazibear:')) {
     const [_, path] = url.split('fazibear:');
     url = 'https://raw.githubusercontent.com/fazibear/strudel-stuff/master/' + path;
   }
