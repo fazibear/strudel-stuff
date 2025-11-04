@@ -1,3 +1,7 @@
+const ssd = function(note) {
+  return note(note).ssd()
+}
+
 register('ssd', (pat) => {
   const drumMapSSD = {
     'bd': 'c2',
