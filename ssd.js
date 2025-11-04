@@ -1,6 +1,3 @@
-const ssd = function(n) {
-  return note(n).ssd()
-}
 
 register('ssd', (pat) => {
   const drumMapSSD = {
@@ -21,3 +18,7 @@ register('ssd', (pat) => {
     return {note: drumMapSSD[note.note] || note.note};
   });
 });
+
+const ssd = function(n) {
+  return note(n).ssd()
+}
