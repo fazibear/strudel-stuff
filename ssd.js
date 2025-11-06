@@ -1,5 +1,5 @@
 
-register('ssd', (pat) => {
+register('ssd', (pats) => {
   const SSD = {
     'bd': 'c2',
     'sd': 'd2',
@@ -14,8 +14,8 @@ register('ssd', (pat) => {
     'ride': 'b3',
   };
 
-  return pat.fmap(note => {
-    return {note: SSD[note.note] || note.note};
+  return pats.fmap(pat => {
+    return {note: SSD[pat.note] || pat.note};
   });
 });
 
