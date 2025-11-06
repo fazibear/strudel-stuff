@@ -13,13 +13,14 @@ window.load = async function(url) {
   }
 
   if (!window.loadCache[url]) {
+    logger('[load] fetching: ' + url);
     const response = await fetch(url);
     const text = await response.text();
     window.loadCache[url] = text;
   }
+  logger('[load] loading: ' + url);
   eval(window.loadCache[url]);
 }
 
-logger('--- LOADER LOADED ---');
-logger('Usage: ');
-logger('  await load(\'github:fazibear/strudel-stuff/master/ssd.js\') ');
+logger('[load] LOADER LOADED');
+logger('[load] Usage: await load(\'github:fazibear/strudel-stuff/master/ssd.js\') ');
