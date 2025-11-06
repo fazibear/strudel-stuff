@@ -19,3 +19,7 @@ window.load = async function(url) {
   }
   eval(window.loadCache[url]);
 }
+
+logger('--- LOADER LOADED ---');
+logger('Usage: ');
+logger('  await load(\'github:fazibear/strudel-stuff/master/ssd.js\') ');
