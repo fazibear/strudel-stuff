@@ -5,11 +5,16 @@ window.load = async function(url) {
   }
 
   if (url.startsWith('github:')) {
-    const [_, path] = url.split('github:');
+    let [_, path] = base.split('github:');
+    path = path.endsWith('/') ? path.slice(0, -1) : path;
+    if (path.split('/').length === 2) {
+      path += '/main';
+    }
+
     url = 'https://raw.githubusercontent.com/' + path;
   } else if (url.startsWith('fazibear:')) {
     const [_, path] = url.split('fazibear:');
-    url = 'https://raw.githubusercontent.com/fazibear/strudel-stuff/master/' + path;
+    url = 'https://raw.githubusercontent.com/fazibear/strudel-stuff/main/' + path;
   }
 
   if (!window.loadCache[url]) {
@@ -23,4 +28,4 @@ window.load = async function(url) {
 }
 
 logger('[load] LOADER LOADED');
-logger('[load] Usage: await load(\'github:fazibear/strudel-stuff/master/ssd.js\') ');
+logger('[load] Usage: await load(\'github:fazibear/strudel-stuff/ssd.js\') ');
