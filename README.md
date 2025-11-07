@@ -1,8 +1,10 @@
 # Strudel stuff
 
 ```js
-window.load || eval(await(await fetch('https://raw.githubusercontent.com/fazibear/strudel-stuff/master/load.js')).text());
+window.load || eval(await(await fetch('https://raw.githubusercontent.com/fazibear/strudel-stuff/main/load.js')).text());
 
-await load('github:fazibear/strudel-stuff/master/ssd.js')
-await load('github:fazibear/strudel-stuff/master/midi.js')
+await load('fazibear:ssd.js')
+await load('fazibear:midi.js')
+await load('fazibear:humanize.js')
+await load('fazibear:trancegate.js')
 ```
