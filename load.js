@@ -35,6 +35,5 @@
     eval(toEval);
   }
 
-  logger('[load] LOADER LOADED');
-  logger('[load] Usage: await load(\'github:fazibear/strudel-stuff/ssd.js\') ');
+  logger('[load] Loaded!');
 })();
