@@ -1,8 +1,9 @@
-if !document.getElementById('fazi-style') {
+if(!document.getElementById('fazi-style')){
 
   var css = `
-    body { background: red !important; }
-
+    body { background: #000000 !important; }
+    body::-webkit-scrollbar { background-color: #00000000; }
+    cm-gutter { background: none !important; }
   `;
 
   var head = document.head || document.getElementsByTagName('head')[0];
