@@ -2,7 +2,8 @@
   window.loadCache = window.loadCache || {};
   window.load = async function(...urls) {
     let toEval = '';
-    for(const url in urls) {
+    for(const key in urls) {
+      const url = urls[key];
       if (typeof url !== 'string') {
         throw new Error('load: expected url string');
       }
