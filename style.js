@@ -5,8 +5,11 @@
         scrollbar-color: var(--gutterForeground) var(--gutterBackground) !important;
         background: black !important;
       }
-      #code .cm-gutter {
+      .cm-gutter, .cm-panel {
         background: black !important;
+      }
+      .cm-vim-panel input {
+        padding: 0px;
       }
     `;
 
