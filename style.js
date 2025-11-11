@@ -2,10 +2,12 @@
   if(!document.getElementById('fazi-style')){
     var css = `
       body {
-        scrollbar-color: var(--gutterForeground) var(--gutterBackground)
+        scrollbar-color: var(--gutterForeground) var(--gutterBackground) !important;
         background: black !important;
       }
-      #code .cm-gutter { background: black !important; }
+      #code .cm-gutter {
+        background: black !important;
+      }
     `;
 
     var head = document.head || document.getElementsByTagName('head')[0];
