@@ -2,15 +2,15 @@
   if(!document.getElementById('fazi-style')){
     var css = `
       body {
-        scrollbar-color: var(--gutterForeground) var(--gutterBackground) !important;
+        scrollbar-color: var(--gutterForeground) black !important;
         background: black !important;
       }
       .cm-gutter, .cm-panel {
         background: black !important;
       }
       .cm-vim-panel input {
-        border: 0px;
-        padding: 0px;
+        box-shadow: none !important;
+        padding: 0px !important;
       }
     `;
 
