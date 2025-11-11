@@ -1,7 +1,9 @@
 (function(){
   window.loadCache = window.loadCache || {};
   window.load = async function(...urls) {
-    eval(urls.reduce(function(toEval, url){
+    var toEval = '';
+    for(const key in urls) {
+      var url = urls[key];
       if (typeof url !== 'string') {
         throw new Error('load: expected url string');
       }
@@ -29,8 +31,9 @@
         } else {
         }
       }
-      return toEval + ';' + window.loadCache[url];
-    }, ''));
+      toEval = toEval + ';' + window.loadCache[url];
+    };
+    eval(toEval);
   }
 
   logger('[load] Loaded!');
