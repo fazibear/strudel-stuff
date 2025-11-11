@@ -24,11 +24,10 @@
       if (!window.loadCache[url]) {
         logger('[load] Fetching: ' + url);
         const response = await fetch(url);
+        logger('[load] ' + response.status + ': ' + url);
         if(response.ok) {
           const text = await response.text();
-          logger('[load] ' + response.statusText + ': ' + url);
           window.loadCache[url] = text;
-        } else {
         }
       }
       toEval = toEval + ';' + window.loadCache[url];
