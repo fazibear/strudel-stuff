@@ -12,6 +12,9 @@
         box-shadow: none !important;
         padding: 0px !important;
       }
+      .cm-scroller {
+        overflow-x: hidden !important;
+      }
     `;
 
     var head = document.head || document.getElementsByTagName('head')[0];
