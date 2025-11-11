@@ -9,6 +9,7 @@
         background: black !important;
       }
       .cm-vim-panel input {
+        border: 0px;
         padding: 0px;
       }
     `;
