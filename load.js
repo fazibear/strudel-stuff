@@ -28,8 +28,8 @@
       logger('[load] loading: ' + url);
       eval(window.loadCache[url]);
     }
-
-    logger('[load] LOADER LOADED');
-    logger('[load] Usage: await load(\'github:fazibear/strudel-stuff/ssd.js\') ');
   }
+
+  logger('[load] LOADER LOADED');
+  logger('[load] Usage: await load(\'github:fazibear/strudel-stuff/ssd.js\') ');
 })();
