@@ -24,7 +24,7 @@
       if (!window.loadCache[url]) {
         logger('[load] Fetching: ' + url);
         const response = await fetch(url);
-        logger('[load] ' + response.statusText + ': ' + url);
+        logger('[load] ' + (response.statusText || 'Fetched') + ': ' + url);
         if(response.ok) {
           const text = await response.text();
           window.loadCache[url] = text;
