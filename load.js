@@ -1,8 +1,7 @@
 (function(){
   window.loadCache = window.loadCache || {};
   window.load = async function(...urls) {
-    let toEval = '';
-    urls.forEach(function(url){
+    eval(urls.reduce(function(toEval, url){
       if (typeof url !== 'string') {
         throw new Error('load: expected url string');
       }
@@ -31,8 +30,7 @@
         }
       }
       toEval = toEval + ';' + window.loadCache[url];
-    }
-    eval(toEval);
+    }, ''));
   }
 
   logger('[load] Loaded!');
