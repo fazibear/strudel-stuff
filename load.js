@@ -29,7 +29,7 @@
         } else {
         }
       }
-      toEval = toEval + ';' + window.loadCache[url];
+      return toEval + ';' + window.loadCache[url];
     }, ''));
   }
 
