@@ -1,10 +1,15 @@
-var css = `
-body { background: red; }
+if !document.getElementById('fazi-style') {
 
-`;
-var head = document.head || document.getElementsByTagName('head')[0];
-var style = document.createElement('style');
-style.type = 'text/css';
-style.appendChild(document.createTextNode(css));
+  var css = `
+    body { background: red !important; }
 
-head.appendChild(style);
+  `;
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  style.id = 'fazi-style'
+  style.appendChild(document.createTextNode(css));
+
+  head.appendChild(style);
+}
