@@ -21,12 +21,15 @@
       }
 
       if (!window.loadCache[url]) {
-        logger('[load] fetching: ' + url);
+        logger('[load] Fetching: ' + url);
         const response = await fetch(url);
-        const text = await response.text();
-        window.loadCache[url] = text;
+        logger('[load] ' + response.statusText + ': ' + url);
+        if(response.ok) {
+          const text = await response.text();
+          window.loadCache[url] = text;
+        } else {
+        }
       }
-      logger('[load] loading: ' + url);
       toEval = toEval + ';' + window.loadCache[url];
     }
     eval(toEval);
