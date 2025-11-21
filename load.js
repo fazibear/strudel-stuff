@@ -5,7 +5,7 @@
     for(const key in urls) {
       var url = urls[key];
       if (typeof url !== 'string') {
-        throw new Error('load: expected url string');
+        continue;
       }
 
       if (url.startsWith('github:')) {
